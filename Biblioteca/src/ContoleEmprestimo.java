@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ContoleEmprestimo {
     
-    public static Map <Usuario, Livro> emprestado = new HashMap<Usuario, Livro>();
+    static Map <Usuario, Livro> emprestado = new HashMap<Usuario, Livro>();
 
     public static String emprestarLivro(Livro livro, Usuario usuario){
         if (usuario.getComLivro() == true) {
@@ -49,7 +49,7 @@ public class ContoleEmprestimo {
         for (Usuario usuario : emprestado.keySet()) {
             //Capturamos o valor a partir da chave
             Livro livro = emprestado.get(usuario);
-            System.out.println(usuario.getCPF() + " = " + livro.getId());
+            System.out.println("\nCPF : " + usuario.getCPF() + " = " + "ID do livro : " + livro.getId());
         }
         
     }

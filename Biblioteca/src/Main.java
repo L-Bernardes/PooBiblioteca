@@ -30,38 +30,47 @@ public class Main{
 
         ControleLivro.adicionarLivro(d1);
         ControleLivro.adicionarLivro(d2);
-        /*ControleLivro.adicionarLivro(d3);
+        ControleLivro.adicionarLivro(d3);
         ControleLivro.adicionarLivro(d4);
         ControleLivro.adicionarLivro(d5);
         ControleLivro.adicionarLivro(f1);
         ControleLivro.adicionarLivro(f2);
         ControleLivro.adicionarLivro(f3);
         ControleLivro.adicionarLivro(f4);
-        ControleLivro.adicionarLivro(f5);*/
+        ControleLivro.adicionarLivro(f5);
         
         ControleUsuario.adicionarUsuario(g1);
         ControleUsuario.adicionarUsuario(g2);
-        /*ControleUsuario.adicionarUsuario(g3);
+        ControleUsuario.adicionarUsuario(g3);
         ControleUsuario.adicionarUsuario(g4);
         ControleUsuario.adicionarUsuario(g5);
         ControleUsuario.adicionarUsuario(p1);
         ControleUsuario.adicionarUsuario(p2);
         ControleUsuario.adicionarUsuario(p3);
         ControleUsuario.adicionarUsuario(p4);
-        ControleUsuario.adicionarUsuario(p5);*/
+        ControleUsuario.adicionarUsuario(p5);
 
         //Testes
         
-        //ControleLivro.mostrarLivros();
-        //ControleUsuario.mostrarUsuarios();
+        ControleLivro.mostrarLivros();
+        ControleUsuario.mostrarUsuarios();
 
-        System.out.println("\n-------------------Nova fase-------------------");
+        System.out.println("\n-------------------Empréstimo-------------------");
 
         ContoleEmprestimo.emprestarLivro(d2, g2);
+        ContoleEmprestimo.emprestarLivro(f2, p2);
+        ContoleEmprestimo.emprestarLivro(f4, g1);
+        ContoleEmprestimo.emprestarLivro(d5, p4);
         
-        //ControleUsuario.mostrarUsuarios();
-        //ControleLivro.mostrarLivros();
         ContoleEmprestimo.mostrarEmprestado();
+
+        System.out.println("\n-------------------Empréstimo-------------------");
+
+        ContoleEmprestimo.devolverLivro(f4, g1);
+        ContoleEmprestimo.devolverLivro(d5, p4);
+
+        ContoleEmprestimo.mostrarEmprestado();
+
          
     }
     
