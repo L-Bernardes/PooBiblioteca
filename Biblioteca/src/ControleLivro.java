@@ -1,13 +1,13 @@
 package src;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+//import java.util.HashMap;
+//import java.util.Map;
 
 public class ControleLivro {
 
     static ArrayList <Livro> acervo = new ArrayList<Livro>();
-    static Map <Usuario, Livro> emprestado = new HashMap<Usuario, Livro>();
+    //static Map <Usuario, Livro> emprestado = new HashMap<Usuario, Livro>();
     
 
     public static String adicionarLivro(Livro livro){
@@ -28,7 +28,7 @@ public class ControleLivro {
         }
     } 
 
-    public static String emprestarLivro(Livro livro, Usuario usuario){
+    /*public static String emprestarLivro(Livro livro, Usuario usuario){
         if (usuario.getComLivro() == true) {
             return "Caloteiro, devolva o livro!";
         } else {
@@ -63,7 +63,7 @@ public class ControleLivro {
                 return "Livro não existe";
             } 
         }
-    }
+    }*/
     //Printar todos os livros
     public static void mostrarLivros(){
         for (int i = 0; i < acervo.size(); i++) {
