@@ -11,7 +11,7 @@ public class ContoleEmprestimo {
         if (usuario.getComLivro() == true) {
             return "Caloteiro, devolva o livro!";
         } else {
-            if (acervo.contains(livro)) {
+            if (ControleLivro.acervo.contains(livro)) {
                 if (livro.getDisponivel() == true) {
                     livro.setDisponivel(false);
                     usuario.setComLivro(true);
@@ -30,7 +30,7 @@ public class ContoleEmprestimo {
         if (usuario.getComLivro() == false) {
             return "Você não tem livro!";
         } else {
-            if (acervo.contains(livro)) {
+            if (ControleLivro.acervo.contains(livro)) {
                 if (livro.getDisponivel() == false) {
                     livro.setDisponivel(true);
                     emprestado.remove(usuario, livro);

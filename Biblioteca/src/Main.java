@@ -50,14 +50,14 @@ public class Main{
         ControleUsuario.adicionarUsuario(p4);
         ControleUsuario.adicionarUsuario(p5);*/
 
-        //System.out.println(ControleLivro.acervo.get(0).getTitulo());
+        //Testes
         
         ControleLivro.mostrarLivros();
         ControleUsuario.mostrarUsuarios();
 
         System.out.println("\n-------------------Nova fase-------------------");
 
-        ControleLivro.emprestarLivro(d1,g1);
+        ContoleEmprestimo.emprestarLivro(d2, g2);
         
         ControleUsuario.mostrarUsuarios();
         ControleLivro.mostrarLivros();
