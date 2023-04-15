@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ContoleEmprestimo {
     
-    static Map <Usuario, Livro> emprestado = new HashMap<Usuario, Livro>();
+    public static Map <Usuario, Livro> emprestado = new HashMap<Usuario, Livro>();
 
     public static String emprestarLivro(Livro livro, Usuario usuario){
         if (usuario.getComLivro() == true) {
@@ -42,5 +42,15 @@ public class ContoleEmprestimo {
                 return "Livro não existe";
             } 
         }
+    }
+
+    //Printar emprestado
+    public static void mostrarEmprestado() {
+        for (Usuario usuario : emprestado.keySet()) {
+            //Capturamos o valor a partir da chave
+            Livro livro = emprestado.get(usuario);
+            System.out.println(usuario.getCPF() + " = " + livro.getId());
+        }
+        
     }
 }

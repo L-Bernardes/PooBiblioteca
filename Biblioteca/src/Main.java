@@ -52,15 +52,16 @@ public class Main{
 
         //Testes
         
-        ControleLivro.mostrarLivros();
-        ControleUsuario.mostrarUsuarios();
+        //ControleLivro.mostrarLivros();
+        //ControleUsuario.mostrarUsuarios();
 
         System.out.println("\n-------------------Nova fase-------------------");
 
         ContoleEmprestimo.emprestarLivro(d2, g2);
         
-        ControleUsuario.mostrarUsuarios();
-        ControleLivro.mostrarLivros();
+        //ControleUsuario.mostrarUsuarios();
+        //ControleLivro.mostrarLivros();
+        ContoleEmprestimo.mostrarEmprestado();
          
     }
     
