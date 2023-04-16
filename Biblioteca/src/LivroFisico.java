@@ -5,8 +5,8 @@ public class LivroFisico extends Livro{
     private int numPaginas;
 
     @Override
-    public void mostrarLivro() {
-        super.mostrarLivro();
+    public void mostrarLivros() {
+        super.mostrarLivros();
     }
 
     public LivroFisico(int id, int anoPublicacao, String titulo, String autor, String editora,

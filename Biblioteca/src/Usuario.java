@@ -5,7 +5,7 @@ public abstract class Usuario {
     protected String CPF, nome, email;
     protected Boolean comLivro;
 
-    public void mostrarUsuario(){
+    public void mostrarUsuarios(){
 
     }
 
