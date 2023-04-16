@@ -7,7 +7,7 @@ public abstract class Livro{
     protected Boolean disponivel;
 
 
-    public void mostrarLivros(){
+    public void mostrarLivro(){
     }
 
     public Livro(int id, int anoPublicacao, String titulo, String autor, String editora, Boolean disponivel) {

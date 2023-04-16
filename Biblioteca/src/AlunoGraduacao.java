@@ -5,8 +5,8 @@ public class AlunoGraduacao extends Usuario {
     private String endereco;
 
     @Override
-    public void mostrarUsuarios() {
-        super.mostrarUsuarios();
+    public void mostrarUsuario() {
+        super.mostrarUsuario();
     }
 
     public AlunoGraduacao(String CPF, String nome, String email, Boolean comLivro, String endereco) {

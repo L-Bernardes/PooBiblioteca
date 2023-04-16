@@ -5,8 +5,8 @@ public class LivroDigital extends Livro{
     private String formato;
 
     @Override
-    public void mostrarLivros() {
-        super.mostrarLivros();
+    public void mostrarLivro() {
+        super.mostrarLivro();
     }
 
     
