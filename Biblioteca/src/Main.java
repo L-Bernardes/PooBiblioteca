@@ -49,29 +49,26 @@ public class Main{
         ControleUsuario.adicionarUsuario(p3);
         ControleUsuario.adicionarUsuario(p4);
         ControleUsuario.adicionarUsuario(p5);
-
-        //Testes
-        
+ 
+        //Mostrar os livros e usuários
         ControleLivro.mostrarLivros();
         ControleUsuario.mostrarUsuarios();
 
-        System.out.println("\n-------------------Empréstimo-------------------");
-
+        //Efetuar o emprestimo de 4 livros
         ContoleEmprestimo.emprestarLivro(d2, g2);
         ContoleEmprestimo.emprestarLivro(f2, p2);
         ContoleEmprestimo.emprestarLivro(f4, g1);
         ContoleEmprestimo.emprestarLivro(d5, p4);
         
+        //Mostrar os livros emprestados
         ContoleEmprestimo.mostrarEmprestado();
 
-        System.out.println("\n-------------------Empréstimo-------------------");
-
+        //Devolver 2 livros emprestados
         ContoleEmprestimo.devolverLivro(f4, g1);
         ContoleEmprestimo.devolverLivro(d5, p4);
 
+        //Mostrar os livros emprestados
         ContoleEmprestimo.mostrarEmprestado();
-
-         
     }
     
 }

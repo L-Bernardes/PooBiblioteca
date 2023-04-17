@@ -1,6 +1,9 @@
 package src;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class ControleLivro {
 
@@ -26,10 +29,22 @@ public class ControleLivro {
 
     //Printar todos os livros
     public static void mostrarLivros(){
+        String mensagem = "";
+
         for (int i = 0; i < acervo.size(); i++) {
-            System.out.println("\nID: " + acervo.get(i).getId() + "\nTitulo: " + acervo.get(i).getTitulo() +
-             "\nAno de publicação: " + acervo.get(i).getAnoPublicacao() + "\nAutor: " + acervo.get(i).getAutor() +
-              "\nEditora: " + acervo.get(i).getEditora() + "\nDisponivel: " + acervo.get(i).getDisponivel() + "\n");
+            Livro livro = acervo.get(i);
+            mensagem += "ID: " + livro.getId() + "\n"
+                     + "Título: " + livro.getTitulo() + "\n"
+                     + "Ano de publicação: " + livro.getAnoPublicacao() + "\n"
+                     + "Autor: " + livro.getAutor() + "\n"
+                     + "Editora: " + livro.getEditora() + "\n"
+                     + "Disponível: " + livro.getDisponivel() + "\n\n";
         }
+    
+        JTextArea textArea = new JTextArea(mensagem);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new java.awt.Dimension(500, 400));
+        JOptionPane.showMessageDialog(null, scrollPane, "Informações dos Livros", JOptionPane.PLAIN_MESSAGE);
     }
+    
 }

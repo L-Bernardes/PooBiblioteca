@@ -2,6 +2,9 @@ package src;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
 public class ContoleEmprestimo {
     
@@ -46,11 +49,17 @@ public class ContoleEmprestimo {
 
     //Printar emprestado
     public static void mostrarEmprestado() {
+        String mensagem = "";
         for (Usuario usuario : emprestado.keySet()) {
-            //Capturamos o valor a partir da chave
+            // Capturamos o valor a partir da chave
             Livro livro = emprestado.get(usuario);
-            System.out.println("\nCPF : " + usuario.getCPF() + " = " + "ID do livro : " + livro.getId());
+            mensagem += "CPF: " + usuario.getCPF() + "\n"
+                     + "ID do livro: " + livro.getId() + "\n\n";
         }
-        
+    
+        JTextArea textArea = new JTextArea(mensagem);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new java.awt.Dimension(500, 400));
+        JOptionPane.showMessageDialog(null, scrollPane, "Informações dos Empréstimos", JOptionPane.PLAIN_MESSAGE);
     }
 }
