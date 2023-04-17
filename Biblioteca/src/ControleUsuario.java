@@ -2,6 +2,10 @@ package src;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 public class ControleUsuario {
 
     static ArrayList <Usuario> listUsuarios = new ArrayList<Usuario>();
@@ -24,10 +28,19 @@ public class ControleUsuario {
         }
     } 
     //Printar todos os usuários
-    public static void mostrarUsuarios(){
+    public static void mostrarUsuarios() {
+        String mensagem = "";
         for (int i = 0; i < listUsuarios.size(); i++) {
-            System.out.println("\nCPF: " + listUsuarios.get(i).getCPF() + "\nNome: " + listUsuarios.get(i).getNome() +
-             "\nEmail: " + listUsuarios.get(i).getEmail() + "\nPossui livro: " + listUsuarios.get(i).getComLivro());
+            Usuario usuario = listUsuarios.get(i);
+            mensagem += "CPF: " + usuario.getCPF() + "\n"
+                     + "Nome: " + usuario.getNome() + "\n"
+                     + "Email: " + usuario.getEmail() + "\n"
+                     + "Possui livro: " + usuario.getComLivro() + "\n\n";
         }
+    
+        JTextArea textArea = new JTextArea(mensagem);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new java.awt.Dimension(500, 400));
+        JOptionPane.showMessageDialog(null, scrollPane, "Informações dos Usuários", JOptionPane.PLAIN_MESSAGE);
     }
 }
