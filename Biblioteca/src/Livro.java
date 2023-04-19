@@ -20,7 +20,6 @@ public abstract class Livro{
     }
 
   
-
     public int getId() {
         return id;
     }
